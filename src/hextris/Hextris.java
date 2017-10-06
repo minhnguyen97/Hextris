@@ -56,7 +56,18 @@ public class Hextris extends Application {
              
             root.getChildren().add(triagle);
         }
-
+        Polygon hexa = new Polygon(new PolygonPoints.Hexagon().GetPoints(80));
+        
+        hexa.setLayoutX(scene.getWidth()/2);
+        hexa.setLayoutY(scene.getHeight()/2);
+        
+        root.getChildren().add(hexa);
+//        Polygon hexaC = new Polygon(new PolygonPoints.Hexagon().GetPoints(60));
+//        
+//        hexaC.setLayoutX(scene.getWidth()/2);
+//        hexaC.setLayoutY(scene.getHeight()/2);
+//        hexaC.setFill(Color.RED);
+//        root.getChildren().add(hexaC);
         primaryStage.setTitle("HexTris");
         primaryStage.setScene(scene);// Set Scene
         primaryStage.show(); // Print to Scene       
