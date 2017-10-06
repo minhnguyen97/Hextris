@@ -37,38 +37,35 @@ public class Hextris extends Application {
     @Override
     public void start(Stage primaryStage) {
         Group root = new Group(); // Lưu button , ảnh ... 
-
+        
+        // Tạo ngữ cảnh game
         Scene scene = new Scene(root, Setting.SCENE_WIDTH, Setting.SCENE_HEIGHT);
-        // Tạo hình tam giác
+        scene.setFill(Color.GRAY);
+        // Tạo hexagon ở giữa màn hình
+        Group hexagon = new Group();
+        hexagon.setLayoutX(scene.getWidth()/2);
+        hexagon.setLayoutY(scene.getHeight()/2);
+        
+        // Tạo hexagon từ 6 hình tam giác
         for (int i = 0; i < 6; ++i) {
             Polygon triagle = new Polygon(new PolygonPoints.Triagle().GetPoints(100));
-            // Set vị trí
-            triagle.setLayoutX(scene.getWidth()/2);
-            triagle.setLayoutY(scene.getHeight()/2);
-            
             // Set góc quay
             double angle = 60 * i;
             triagle.getTransforms().add(new Rotate(angle, 0, 0));
-            
             // Set màu
-            
             triagle.setFill(listColors[i]);
-             
-            root.getChildren().add(triagle);
+ 
+            hexagon.getChildren().add(triagle);
         }
-        Polygon hexa = new Polygon(new PolygonPoints.Hexagon().GetPoints(80));
+        // Tạo 1 hexagon ở giữa 
+        Polygon hexa = new Polygon(new PolygonPoints.Hexagon().GetPoints(80));       
+
+        hexagon.getChildren().add(hexa);
+        root.getChildren().add(hexagon);
         
-        hexa.setLayoutX(scene.getWidth()/2);
-        hexa.setLayoutY(scene.getHeight()/2);
         
-        root.getChildren().add(hexa);
-//        Polygon hexaC = new Polygon(new PolygonPoints.Hexagon().GetPoints(60));
-//        
-//        hexaC.setLayoutX(scene.getWidth()/2);
-//        hexaC.setLayoutY(scene.getHeight()/2);
-//        hexaC.setFill(Color.RED);
-//        root.getChildren().add(hexaC);
-        primaryStage.setTitle("HexTris");
+        
+        primaryStage.setTitle("HexTris Game");
         primaryStage.setScene(scene);// Set Scene
         primaryStage.show(); // Print to Scene       
     }
