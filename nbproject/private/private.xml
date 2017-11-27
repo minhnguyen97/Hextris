@@ -3,10 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/JavaSource/Game/Hextris/src/hextris/GameStyle.css</file>
             <file>file:/D:/JavaSource/Game/Hextris/src/hextris/Hextris.java</file>
+            <file>file:/D:/JavaSource/Game/Hextris/src/hextris/UFOPool.java</file>
             <file>file:/D:/JavaSource/Game/Hextris/src/hextris/GameScene.java</file>
             <file>file:/D:/JavaSource/Game/Hextris/src/hextris/Setting.java</file>
+            <file>file:/D:/JavaSource/Game/Hextris/src/hextris/UFO.java</file>
+            <file>file:/D:/JavaSource/Game/Hextris/src/hextris/GameOverScene.java</file>
+            <file>file:/D:/JavaSource/Game/Hextris/src/hextris/Director.java</file>
             <file>file:/D:/JavaSource/Game/Hextris/src/hextris/PolygonPoints.java</file>
             <file>file:/D:/JavaSource/Game/Hextris/src/hextris/StartScene.java</file>
         </group>

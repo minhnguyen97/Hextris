@@ -15,17 +15,19 @@ import javafx.stage.Stage;
  */
 public class Hextris extends Application {
 
-        
+
     private Scene scene;
-    
+    enum GameState {
+        START,
+        PLAYING,
+        GAMEOVER
+    }
     @Override
     public void start(Stage primaryStage) {
-       
-        
-        scene = new StartScene().CreateStartScene();
         primaryStage.setTitle("HexTris Game");
-        primaryStage.setScene(scene);// Set Scene
-        primaryStage.show(); // Print to Scene       
+        scene = new StartScene().CreateStartScene();
+        Director.getInstance().setStage(primaryStage);
+        Director.getInstance().setScene(scene);
     }
     
    
@@ -35,5 +37,5 @@ public class Hextris extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-
+   
 }

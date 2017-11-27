@@ -5,18 +5,13 @@
  */
 package hextris;
 
-import com.sun.javaws.jnl.JavaFXAppDesc;
+
 import javafx.scene.Group;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundImage;
-import javafx.scene.layout.BackgroundPosition;
-import javafx.scene.layout.BackgroundRepeat;
-import javafx.scene.layout.BackgroundSize;
+
 
 /**
  *
@@ -40,19 +35,21 @@ public class StartScene {
         root.getChildren().add(title);
         // ButtonStart
         
-        this.start = new Button();
-        
+        this.start = new Button("Play");
+        start.setLayoutX(Setting.SCENE_WIDTH * 0.47 );
+        start.setLayoutY(Setting.SCENE_HEIGHT * 0.425);
+        start.setScaleX(2.5);
+        start.setScaleY(3.2);
+        start.setOnAction(e -> Director.getInstance().setScene(new GameScene().CreateGameScene()));
         root.getChildren().add(start);
         
-        //this.SetupEventHandling();
+
        
         
 
         
         return scene;
     }
-    private void SetupEventHandling() {
-        
-    }
+    
 }
  
